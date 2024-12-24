@@ -82,7 +82,7 @@ public class AccountController {
                                          @PathVariable Double amount) {
         accountService.transferAmount(myUser.getId(), senderAccountId, receiverAccountId, amount);
         return ResponseEntity.status(200).body(new ApiResponse("Amount: " + amount + " has been transferred from account: " + senderAccountId
-                                                                + "to account: " + receiverAccountId + " successfully"));
+                                                                + " to account: " + receiverAccountId + " successfully"));
     }
 
     @PutMapping("/activate/{accountId}")
